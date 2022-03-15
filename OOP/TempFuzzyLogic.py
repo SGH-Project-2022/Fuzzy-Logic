@@ -26,12 +26,12 @@ class TempFuzzyLogic:
             self.__temp_membership['hot'] = fuzz.trapmf(
                 self.__temp_membership.universe, [65, 70, 80, 80])
 
-            self.__temp_rate_mambership['cold'] = fuzz.trimf(
-                self.__temp_rate_mambership .universe, [-50, -10, 0])
+            self.__temp_rate_mambership['cold'] = fuzz.trapmf(
+                self.__temp_rate_mambership .universe, [-50, -50, -10, 0])
             self.__temp_rate_mambership['normal'] = fuzz.trimf(
                 self.__temp_rate_mambership .universe, [-10, 0, 10])
-            self.__temp_rate_mambership['hot'] = fuzz.trimf(
-                self.__temp_rate_mambership .universe, [0, 10, 50])
+            self.__temp_rate_mambership['hot'] = fuzz.trapmf(
+                self.__temp_rate_mambership .universe, [0, 10, 50, 50])
 
             self.__fan_membership['slow'] = fuzz.trapmf(
                 self.__fan_membership.universe, [0, 0, 63, 127])
